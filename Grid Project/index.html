@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+  
+    }
+
+    .container {
+      display: grid;
+      height: 748px;
+      width: 748px;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 20px;
+      gap: 9px;
+      border: solid 3px black;
+    }
+
+    .box1 {
+      background-color:#E72F24;
+    }
+    
+    .box2 {
+      background-color: #F0F1EC;
+      grid-column: span 3;
+    }
+
+    .box3 {
+      background-color: #F0F1EC;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    .box4 {
+      background-color: #F0F1EC; /*YOU COULD USE grid-area: 2 / 2 / 4 / 4*/
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    .box5 {
+      background-color: #004592;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 4;
+      grid-column-end: 5;
+      margin-bottom: 20px;
+    }
+
+
+    .box6 {
+      background-color: #F0F1EC;
+    }
+
+    .box7 {
+      background-color: #F9D01E;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    .box8 {
+      background-color: #232629;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+
+    .box9 {
+      background-color: #F0F1EC;
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+
+    #bigbox {
+      background-color: #232629;
+    }
+
+    #bkgnd {
+      background-color: #F0F1EC;
+    }
+  </style>
+</head>
+
+<body id="bkgnd">
+  <!-- Write your HTML here -->
+
+  <div id="bigbox">
+
+  <div class="container">
+    <div class="box1"><p>Mondrian replica created using the grid system</p></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+  </div>
+  </div>
+</body>
+
+</html>

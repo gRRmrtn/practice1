@@ -1,0 +1,392 @@
+body {
+    background-color: white;
+    color: #333;
+    font-size: 24px;
+}
+
+body#id-class-page{
+    background-color: white;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: Georgia, Times, serif;
+}
+
+p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+ol {
+    margin: 20px;
+    padding: 20px;
+    color: antiquewhite;
+}
+
+/* THIS A COMMENT! COOL! */
+
+#main-title {
+    color:#fc3;
+    background: #353535;
+    padding: 10px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.section-header {
+    font-size: 2em;
+    color: olive;
+    border: solid 1px pink;
+    padding: 40px 20px 10px;
+    text-align: center;
+}
+
+/*STYLES FOR THE DESCENDANT SELECTOR lecture*/
+
+.primary-box {
+    background-color: white;
+    border: solid 10px #333;
+    padding: 20px;
+}
+
+.primary-box h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.secondary-box {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.secondary-box p {
+    font-size: 14px;
+    font-style: normal;
+}
+
+.secondary-box p em {
+    color: #fc3fc3;
+
+}
+
+/*STYLES FOR ThE GROUPING SELECTOR lecture*/
+
+#main-container {
+  
+    margin: O auto;
+}
+
+.primary-box, .secondary-box {
+    margin: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    border-bottom: solid 3px red;
+    padding: 0 0 10px;
+}
+
+.inside-box {
+    border: solid 2px black;
+}
+
+/*COLORS WITH CSS3 LECTURE*/
+body#colors {
+    background: rgba(25,52,84,1);
+    color: white;
+}
+
+#colors #container {
+    width: 600px;
+    padding: 40px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    box-sizing: border-box;
+}
+
+/*SHADOWS LECTURE*/
+#shadows #container {
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    
+}   
+
+/*COLUMN STUFF*/
+#three-columns {
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: solid;
+}
+
+/*ANIMATIONS and TRANSITIONS*/
+
+#box {
+    line-height: 300px;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 300px;
+    height:300px;
+    background: red;
+    color: #fc3;
+    text-align: center;
+}
+
+@keyframes box {
+    from {background-color: red}
+    to {background-color: black}
+    from {border-radius: 5px;}
+    to {border-radius: 200px;}
+}
+
+#animations #box {        
+    position: relative;  
+    animation-name: box;       
+    animation-duration: 10s;
+    animation-delay: 5s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+#box2 {
+    width: 200px;
+    height: 200px;
+    background: green;
+    color: #fc3fc3;
+}
+
+/*BUTTONS*/
+
+@keyframes buttonAnimation {
+    from {padding: 10px 20px; font-size: inherit;}
+    to {padding: 15px 30px; font-size: 30px;} /*these are rules for animating the buttons, in this case increasing the padding INCREASES THE BUTTON SIZE. The name of the property is buttonAnimation, to be used in hover*/
+}
+
+.button {
+    display: inline-block;/*puts them side by side and able to change width*/
+    background: #fc3;
+    background: linear-gradient(#fc3,#f91);/*initial color fc3 blends into second color SIMILAR COLORS GIVE A THREE DIMINSIONAL LOOK!!!*/
+    border: solid 1px #999;
+    border-radius: 5px; /*rounds button*/
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);/*gives contrast between background and text color with a slight blur at 2px and opacity of .6*/
+}
+
+.button:hover {
+    border-color: #333;
+    text-shadow: 0 1px 2px rgba(0,0,0,.9);
+    background: #f91;
+    background: linear-gradient(to top,#fc3,#f91);/*flips the colors in the gradient for a PRESSED INWARD LOOK*/
+    animation-name: buttonAnimation;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;/*KEEPS THE ANIMATION AT THE FINAL FRAME WHILE HOVERING*/
+}
+
+.button:active {
+    position: relative;
+    top: 1px; /*these two lines establish the home position, then move it down 1px WHEN CLICKED ON*/
+}
+
+.alt-button {
+    background: radial-gradient(#fc3,#f91);
+}
+
+.alt-button:hover {
+    background: radial-gradient(#f91,#fc3);
+}
+
+/*ORBIT ANIMATION LECTURE*/
+/*SETTING PARAMS FOR THE STAR PULSE IN BACKGROUND*/
+@-webkit-keyframes starPulse {
+    from {opacity: 1;}
+    to {opacity: .2;}
+}
+@-moz-keyframes starPulse {
+    from {opacity: 1;}
+    to {opacity: .2;}
+}
+@-o-keyframes starPulse {
+    from {opacity: 1;}
+    to {opacity: .2;}
+}
+@keyframes starPulse {
+    from {opacity: 1;}
+    to {opacity: .2;}
+}
+
+@keyframes sunFire {
+    from {-webkit-box-shadow:0 0 50px #f5c91a;
+        -moz-box-shadow:0 0 50px #f5c91a;
+        box-shadow:0 0 50px #f5c91a;
+    }
+    to {-webkit-box-shadow:0 0 100px #f5c91a;
+        -moz-box-shadow:0 0 100px #f5c91a;
+        box-shadow:0 0 100px #f5c91a;
+    }
+}
+@-webkit-keyframes sunFire {
+        from {-webkit-box-shadow:0 0 50px #f5c91a;
+            -moz-box-shadow:0 0 50px #f5c91a;
+            box-shadow:0 0 50px #f5c91a;
+        }
+        to {-webkit-box-shadow:0 0 100px #f5c91a;
+            -moz-box-shadow:0 0 100px #f5c91a;
+            box-shadow:0 0 100px #f5c91a;
+        }
+}
+@-moz-keyframes sunFire {
+    from {-webkit-box-shadow:0 0 50px #f5c91a;
+        -moz-box-shadow:0 0 50px #f5c91a;
+        box-shadow:0 0 50px #f5c91a;
+    }
+    to {-webkit-box-shadow:0 0 100px #f5c91a;
+        -moz-box-shadow:0 0 100px #f5c91a;
+        box-shadow:0 0 100px #f5c91a;
+    }
+}
+@-o-keyframes sunFire {
+    from {-webkit-box-shadow:0 0 50px #f5c91a;
+        -moz-box-shadow:0 0 50px #f5c91a;
+        box-shadow:0 0 50px #f5c91a;
+    }
+    to {-webkit-box-shadow:0 0 100px #f5c91a;
+        -moz-box-shadow:0 0 100px #f5c91a;
+        box-shadow:0 0 100px #f5c91a;
+    }
+}
+
+/*ROTATE ANIMATION*/
+@keyframes spin {           /*PROPERTIES TO SET A SPIN TO AN ELEMENT*/
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+@-webkit-keyframes spin {           /*PROPERTIES TO SET A SPIN TO AN ELEMENT*/
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+@-moz-keyframes spin {           /*PROPERTIES TO SET A SPIN TO AN ELEMENT*/
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+@-o-keyframes spin {           /*PROPERTIES TO SET A SPIN TO AN ELEMENT*/
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+html, body {
+    height: 100%;
+    width: 100%;    /*we want the space to be the full screen hight and width*/
+}
+
+#universe {
+    background: black;
+    background: -webkit-radial-gradient(#555,#000);
+    background: -moz-radial-gradient(#555,#000);
+    background: -o-radial-gradient(#555,#000);
+    background: radial-gradient(#555,#000);
+}
+
+#stars {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: url(images/stars.png);
+
+    -webkit-animation: starPulse 4s infinite alternate;
+    -moz-animation: starPulse 4s infinite alternate;
+    -o-animation: starPulse 4s infinite alternate;
+    animation: starPulse 4s infinite alternate;
+}
+
+#sun {
+    position: absolute; /*lets you move it within the stars div*/
+    top: 50%;
+    left:50%; /*these lines position in within the stars div 50% for each puts the TOP RIGHT CORNER in the center, so adjust it using MARGIN*/
+    margin-top: -100px;
+    margin-left: -100px;/*these margin lines move the sun left and up by 100pixels, centering it*/
+    z-index: 4;/*moves it in front of the stars, with the higher z-index*/
+    height: 200px;
+    width: 200px;
+
+    border-radius: 100%; /*rounds the corners, making a circle*/
+
+    background: orange;
+    background: -webkit-radial-gradient(#f5c313,#ec7e08);
+    background: -moz-radial-gradient(#f5c313,#ec7e08);
+    background: -o-radial-gradient(#f5c313,#ec7e08);
+    background: radial-gradient(#f5c313,#ec7e08); /*colors the sun gradient style*/
+
+    -webkit-box-shadow: 0 0 50px #f5c91a;
+    -moz-box-shadow:0 0 50px #f5c91a;
+    box-shadow: 0 0 50px #f5c91a;  /*gives the sun its flare look*/
+
+    animation: sunFire 4s infinite alternate;
+    -webkit-animation: sunFire 4s infinite alternate;
+    -moz-animation: sunFire 4s infinite alternate;
+    -o-animation: sunFire 4s infinite alternate;
+}
+
+#earthOrbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -300px;
+    border-radius: 100%;
+
+    z-index: 4;
+    height: 700px;
+    width: 600px;
+    animation: spin 30s linear infinite;
+    -webkit-animation: spin 30s linear infinite;
+    -moz-animation: spin 30s linear infinite;
+    -o-animation: spin 30s linear infinite;
+}
+
+#earth {
+    position:absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -40px; /*moves earth into the orbit center*/
+    animation: spin 3s linear infinite;
+    -webkit-animation: spin 3s linear infinite;
+    -moz-animation: spin 3s linear infinite;
+    -o-animation: spin 3s linear infinite;
+}
+
+#moonOrbit {
+
+    height: 120px;
+    width: 120px;
+    position:absolute; /*positions the moon orbit WITHIN the earth orbit*/
+    z-index: 4;
+    top: 50%;
+    left: 0;
+    margin-top: -60px;
+    margin-left: -20px;
+    border-radius: 100%;
+    animation: spin 4s linear infinite reverse;
+    -webkit-animation: spin 4s linear infinite reverse;
+    -moz-animation: spin 4s linear infinite reverse;
+    -o-animation: spin 4s linear infinite reverse;
+}
+
+#moon {
+    height: 20px;
+    width: 20px;
+    background: radial-gradient(#ddd,#888);
+    background: -webkit-radial-gradient(#ddd,#888);
+    background: -moz-radial-gradient(#ddd,#888);
+    background: -o-radial-gradient(#ddd,#888);
+    border-radius: 100%;
+}

@@ -1,0 +1,19 @@
+#main-ttl {
+    color: sienna;
+    font-size: 48px;
+    
+}
+
+.bcol {
+    background-color: antiquewhite;
+}
+#tagline {
+    color: darkblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#tagemf {
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    border: solid 2px;
+}
